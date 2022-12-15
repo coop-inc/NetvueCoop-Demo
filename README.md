@@ -32,7 +32,7 @@ Check login status
 NetvueSDK.init().userManager.isLoggedIn()
 ```
 
-Evaluate return codes
+Evaluate return codes (`KotlinInt`)
 ```swift
 switch retCode.int32Value {
     case NetvueReturnCode.ok.value:
@@ -44,8 +44,39 @@ switch retCode.int32Value {
     }
 ```
 
+##### Protocols
+
+`UserManagerNotifications` delegation
+ 
 ```swift
-LiveMediaPlayer(render: <#T##Netvue_sdk_player_rendererMediaPlayerRenderer#>, deviceNode: <#T##DeviceNode#>, delegate: <#T##MediaPlayerDelegate#>, permissionManager: <#T##Netvue_sdk_permissionAppPermissionManagerProtocol?#>)
+// MARK: UserManagerNotifications
+extension NetvueManager {
+    func onUserLogin() {
+        DispatchQueue.main.async {
+            Self.logger.info("onUserLogin")
+        }
+    }
+    
+    func onUserLogout(reason: UserLogoutReason) {
+        DispatchQueue.main.async {
+            Self.logger.info("onUserLogout reason: \(reason, privacy: .public)")
+        }
+    }
+}
+
+```
+
+`MediaPlayerDelegate` 
+
+`<#T##Netvue_sdk_permissionAppPermissionManagerProtocol?#>`
+
+
+##### Privacy usage string flags
+
+
+
+```swift
+LiveMediaPlayer(render: <#T##Netvue_sdk_player_rendererMediaPlayerRenderer#>, deviceNode: <#T##DeviceNode#>, delegate: T##MediaPlayerDelegate, permissionManager: <#T##Netvue_sdk_permissionAppPermissionManagerProtocol?#>)
 ```
 
 
