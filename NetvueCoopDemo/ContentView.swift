@@ -60,7 +60,7 @@ struct ContentView: View {
             }
             .onAppear {
                 DispatchQueue.main.async {
-                    NetvueManager.shared.login()
+                    NetvueManager.shared.login(username: Config.username, password: Config.password)
                 }
             }
         }
