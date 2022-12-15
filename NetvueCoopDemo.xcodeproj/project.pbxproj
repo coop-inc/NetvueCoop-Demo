@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		940373B52949450100F0157A /* NetvueCoopDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940373B42949450100F0157A /* NetvueCoopDemoApp.swift */; };
+		940373B72949450100F0157A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940373B62949450100F0157A /* ContentView.swift */; };
+		940373B92949450200F0157A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940373B82949450200F0157A /* Assets.xcassets */; };
+		940373BD2949450200F0157A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940373BC2949450200F0157A /* Preview Assets.xcassets */; };
+		940373C72949450200F0157A /* NetvueCoopDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940373C62949450200F0157A /* NetvueCoopDemoTests.swift */; };
+		940373D12949450200F0157A /* NetvueCoopDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940373D02949450200F0157A /* NetvueCoopDemoUITests.swift */; };
+		940373D32949450200F0157A /* NetvueCoopDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940373D22949450200F0157A /* NetvueCoopDemoUITestsLaunchTests.swift */; };
+		940373F22949471500F0157A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 940373F12949471500F0157A /* Realm */; };
+		940373F42949471500F0157A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 940373F32949471500F0157A /* RealmSwift */; };
+		940373F6294947C000F0157A /* CameraDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940373F5294947C000F0157A /* CameraDevice.swift */; };
+		9403740829494D0D00F0157A /* NetvueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403740729494D0D00F0157A /* NetvueManager.swift */; };
+		9403740B29494D7E00F0157A /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403740A29494D7E00F0157A /* DeviceListView.swift */; };
+		9403740D2949505000F0157A /* DeviceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403740C2949505000F0157A /* DeviceRowView.swift */; };
+		9403740F294950E600F0157A /* DeviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403740E294950E600F0157A /* DeviceDetailView.swift */; };
+		94037411294961F000F0157A /* NetvueSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940373E32949452E00F0157A /* NetvueSDK.xcframework */; };
+		94037412294961F000F0157A /* NetvueSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 940373E32949452E00F0157A /* NetvueSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		940374142949672900F0157A /* AWSIoT.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940374132949672900F0157A /* AWSIoT.xcframework */; };
+		940374152949672900F0157A /* AWSIoT.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 940374132949672900F0157A /* AWSIoT.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		940374172949673800F0157A /* AWSS3.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940374162949673800F0157A /* AWSS3.xcframework */; };
+		940374182949673800F0157A /* AWSS3.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 940374162949673800F0157A /* AWSS3.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9403741A294968DA00F0157A /* AWSCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94037419294968DA00F0157A /* AWSCore.xcframework */; };
+		9403741B294968DA00F0157A /* AWSCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94037419294968DA00F0157A /* AWSCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9403741D2949697100F0157A /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403741C2949697100F0157A /* WebRTC.xcframework */; };
+		9403741E2949697100F0157A /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9403741C2949697100F0157A /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9403742029496C9300F0157A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403741F29496C9300F0157A /* RealmManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		940373C32949450200F0157A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 940373A92949450100F0157A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 940373B02949450100F0157A;
+			remoteInfo = NetvueCoopDemo;
+		};
+		940373CD2949450200F0157A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 940373A92949450100F0157A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 940373B02949450100F0157A;
+			remoteInfo = NetvueCoopDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9403740629494A0800F0157A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				940374152949672900F0157A /* AWSIoT.xcframework in Embed Frameworks */,
+				940374182949673800F0157A /* AWSS3.xcframework in Embed Frameworks */,
+				9403741B294968DA00F0157A /* AWSCore.xcframework in Embed Frameworks */,
+				9403741E2949697100F0157A /* WebRTC.xcframework in Embed Frameworks */,
+				94037412294961F000F0157A /* NetvueSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		940373B12949450100F0157A /* NetvueCoopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetvueCoopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		940373B42949450100F0157A /* NetvueCoopDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetvueCoopDemoApp.swift; sourceTree = "<group>"; };
+		940373B62949450100F0157A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		940373B82949450200F0157A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		940373BA2949450200F0157A /* NetvueCoopDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetvueCoopDemo.entitlements; sourceTree = "<group>"; };
+		940373BC2949450200F0157A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		940373C22949450200F0157A /* NetvueCoopDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetvueCoopDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		940373C62949450200F0157A /* NetvueCoopDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetvueCoopDemoTests.swift; sourceTree = "<group>"; };
+		940373CC2949450200F0157A /* NetvueCoopDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetvueCoopDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		940373D02949450200F0157A /* NetvueCoopDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetvueCoopDemoUITests.swift; sourceTree = "<group>"; };
+		940373D22949450200F0157A /* NetvueCoopDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetvueCoopDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		940373E32949452E00F0157A /* NetvueSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NetvueSDK.xcframework; path = ../../Frameworks/NetvueSDK.xcframework; sourceTree = "<group>"; };
+		940373F5294947C000F0157A /* CameraDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDevice.swift; sourceTree = "<group>"; };
+		9403740729494D0D00F0157A /* NetvueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetvueManager.swift; sourceTree = "<group>"; };
+		9403740A29494D7E00F0157A /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
+		9403740C2949505000F0157A /* DeviceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRowView.swift; sourceTree = "<group>"; };
+		9403740E294950E600F0157A /* DeviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailView.swift; sourceTree = "<group>"; };
+		9403741029495A2C00F0157A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		940374132949672900F0157A /* AWSIoT.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AWSIoT.xcframework; path = ../../Frameworks/AWSIoT.xcframework; sourceTree = "<group>"; };
+		940374162949673800F0157A /* AWSS3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AWSS3.xcframework; path = ../../Frameworks/AWSS3.xcframework; sourceTree = "<group>"; };
+		94037419294968DA00F0157A /* AWSCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AWSCore.xcframework; path = ../../Frameworks/NETVUE_OLD_SDKS/AWSCore.xcframework; sourceTree = "<group>"; };
+		9403741C2949697100F0157A /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = ../../Frameworks/WebRTC.xcframework; sourceTree = "<group>"; };
+		9403741F29496C9300F0157A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		940373AE2949450100F0157A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940374142949672900F0157A /* AWSIoT.xcframework in Frameworks */,
+				940373F22949471500F0157A /* Realm in Frameworks */,
+				9403741A294968DA00F0157A /* AWSCore.xcframework in Frameworks */,
+				940373F42949471500F0157A /* RealmSwift in Frameworks */,
+				940374172949673800F0157A /* AWSS3.xcframework in Frameworks */,
+				94037411294961F000F0157A /* NetvueSDK.xcframework in Frameworks */,
+				9403741D2949697100F0157A /* WebRTC.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940373BF2949450200F0157A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940373C92949450200F0157A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		940373A82949450100F0157A = {
+			isa = PBXGroup;
+			children = (
+				9403741029495A2C00F0157A /* README.md */,
+				940373B32949450100F0157A /* NetvueCoopDemo */,
+				940373C52949450200F0157A /* NetvueCoopDemoTests */,
+				940373CF2949450200F0157A /* NetvueCoopDemoUITests */,
+				940373B22949450100F0157A /* Products */,
+				940373DF2949452E00F0157A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		940373B22949450100F0157A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				940373B12949450100F0157A /* NetvueCoopDemo.app */,
+				940373C22949450200F0157A /* NetvueCoopDemoTests.xctest */,
+				940373CC2949450200F0157A /* NetvueCoopDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		940373B32949450100F0157A /* NetvueCoopDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9403740929494D6E00F0157A /* Views */,
+				940373B42949450100F0157A /* NetvueCoopDemoApp.swift */,
+				940373B62949450100F0157A /* ContentView.swift */,
+				940373B82949450200F0157A /* Assets.xcassets */,
+				940373BA2949450200F0157A /* NetvueCoopDemo.entitlements */,
+				940373BB2949450200F0157A /* Preview Content */,
+				940373F5294947C000F0157A /* CameraDevice.swift */,
+				9403740729494D0D00F0157A /* NetvueManager.swift */,
+				9403741F29496C9300F0157A /* RealmManager.swift */,
+			);
+			path = NetvueCoopDemo;
+			sourceTree = "<group>";
+		};
+		940373BB2949450200F0157A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				940373BC2949450200F0157A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		940373C52949450200F0157A /* NetvueCoopDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				940373C62949450200F0157A /* NetvueCoopDemoTests.swift */,
+			);
+			path = NetvueCoopDemoTests;
+			sourceTree = "<group>";
+		};
+		940373CF2949450200F0157A /* NetvueCoopDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				940373D02949450200F0157A /* NetvueCoopDemoUITests.swift */,
+				940373D22949450200F0157A /* NetvueCoopDemoUITestsLaunchTests.swift */,
+			);
+			path = NetvueCoopDemoUITests;
+			sourceTree = "<group>";
+		};
+		940373DF2949452E00F0157A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9403741C2949697100F0157A /* WebRTC.xcframework */,
+				94037419294968DA00F0157A /* AWSCore.xcframework */,
+				940374162949673800F0157A /* AWSS3.xcframework */,
+				940374132949672900F0157A /* AWSIoT.xcframework */,
+				940373E32949452E00F0157A /* NetvueSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9403740929494D6E00F0157A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9403740A29494D7E00F0157A /* DeviceListView.swift */,
+				9403740C2949505000F0157A /* DeviceRowView.swift */,
+				9403740E294950E600F0157A /* DeviceDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		940373B02949450100F0157A /* NetvueCoopDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940373D62949450200F0157A /* Build configuration list for PBXNativeTarget "NetvueCoopDemo" */;
+			buildPhases = (
+				940373AD2949450100F0157A /* Sources */,
+				940373AE2949450100F0157A /* Frameworks */,
+				940373AF2949450100F0157A /* Resources */,
+				9403740629494A0800F0157A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetvueCoopDemo;
+			packageProductDependencies = (
+				940373F12949471500F0157A /* Realm */,
+				940373F32949471500F0157A /* RealmSwift */,
+			);
+			productName = NetvueCoopDemo;
+			productReference = 940373B12949450100F0157A /* NetvueCoopDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		940373C12949450200F0157A /* NetvueCoopDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940373D92949450200F0157A /* Build configuration list for PBXNativeTarget "NetvueCoopDemoTests" */;
+			buildPhases = (
+				940373BE2949450200F0157A /* Sources */,
+				940373BF2949450200F0157A /* Frameworks */,
+				940373C02949450200F0157A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				940373C42949450200F0157A /* PBXTargetDependency */,
+			);
+			name = NetvueCoopDemoTests;
+			productName = NetvueCoopDemoTests;
+			productReference = 940373C22949450200F0157A /* NetvueCoopDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		940373CB2949450200F0157A /* NetvueCoopDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940373DC2949450200F0157A /* Build configuration list for PBXNativeTarget "NetvueCoopDemoUITests" */;
+			buildPhases = (
+				940373C82949450200F0157A /* Sources */,
+				940373C92949450200F0157A /* Frameworks */,
+				940373CA2949450200F0157A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				940373CE2949450200F0157A /* PBXTargetDependency */,
+			);
+			name = NetvueCoopDemoUITests;
+			productName = NetvueCoopDemoUITests;
+			productReference = 940373CC2949450200F0157A /* NetvueCoopDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		940373A92949450100F0157A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					940373B02949450100F0157A = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					940373C12949450200F0157A = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 940373B02949450100F0157A;
+					};
+					940373CB2949450200F0157A = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 940373B02949450100F0157A;
+					};
+				};
+			};
+			buildConfigurationList = 940373AC2949450100F0157A /* Build configuration list for PBXProject "NetvueCoopDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 940373A82949450100F0157A;
+			packageReferences = (
+				940373ED2949463A00F0157A /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */,
+				940373F02949471500F0157A /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = 940373B22949450100F0157A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				940373B02949450100F0157A /* NetvueCoopDemo */,
+				940373C12949450200F0157A /* NetvueCoopDemoTests */,
+				940373CB2949450200F0157A /* NetvueCoopDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		940373AF2949450100F0157A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940373BD2949450200F0157A /* Preview Assets.xcassets in Resources */,
+				940373B92949450200F0157A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940373C02949450200F0157A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940373CA2949450200F0157A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		940373AD2949450100F0157A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9403740F294950E600F0157A /* DeviceDetailView.swift in Sources */,
+				9403742029496C9300F0157A /* RealmManager.swift in Sources */,
+				9403740829494D0D00F0157A /* NetvueManager.swift in Sources */,
+				9403740D2949505000F0157A /* DeviceRowView.swift in Sources */,
+				940373B72949450100F0157A /* ContentView.swift in Sources */,
+				9403740B29494D7E00F0157A /* DeviceListView.swift in Sources */,
+				940373B52949450100F0157A /* NetvueCoopDemoApp.swift in Sources */,
+				940373F6294947C000F0157A /* CameraDevice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940373BE2949450200F0157A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940373C72949450200F0157A /* NetvueCoopDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940373C82949450200F0157A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940373D12949450200F0157A /* NetvueCoopDemoUITests.swift in Sources */,
+				940373D32949450200F0157A /* NetvueCoopDemoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		940373C42949450200F0157A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 940373B02949450100F0157A /* NetvueCoopDemo */;
+			targetProxy = 940373C32949450200F0157A /* PBXContainerItemProxy */;
+		};
+		940373CE2949450200F0157A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 940373B02949450100F0157A /* NetvueCoopDemo */;
+			targetProxy = 940373CD2949450200F0157A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		940373D42949450200F0157A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
+				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "-D IOS_SIMULATOR";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		940373D52949450200F0157A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		940373D72949450200F0157A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NetvueCoopDemo/NetvueCoopDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"NetvueCoopDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = CSPD9CV9BN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Used to to control your device";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to pair your camera device with QR code";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Not sure";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farm.coop.NetvueCoopDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		940373D82949450200F0157A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NetvueCoopDemo/NetvueCoopDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"NetvueCoopDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = CSPD9CV9BN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Used to to control your device";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to pair your camera device with QR code";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Not sure";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farm.coop.NetvueCoopDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		940373DA2949450200F0157A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSPD9CV9BN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farm.coop.NetvueCoopDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetvueCoopDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetvueCoopDemo";
+			};
+			name = Debug;
+		};
+		940373DB2949450200F0157A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSPD9CV9BN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farm.coop.NetvueCoopDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetvueCoopDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetvueCoopDemo";
+			};
+			name = Release;
+		};
+		940373DD2949450200F0157A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSPD9CV9BN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farm.coop.NetvueCoopDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetvueCoopDemo;
+			};
+			name = Debug;
+		};
+		940373DE2949450200F0157A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSPD9CV9BN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farm.coop.NetvueCoopDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetvueCoopDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		940373AC2949450100F0157A /* Build configuration list for PBXProject "NetvueCoopDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940373D42949450200F0157A /* Debug */,
+				940373D52949450200F0157A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		940373D62949450200F0157A /* Build configuration list for PBXNativeTarget "NetvueCoopDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940373D72949450200F0157A /* Debug */,
+				940373D82949450200F0157A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		940373D92949450200F0157A /* Build configuration list for PBXNativeTarget "NetvueCoopDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940373DA2949450200F0157A /* Debug */,
+				940373DB2949450200F0157A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		940373DC2949450200F0157A /* Build configuration list for PBXNativeTarget "NetvueCoopDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940373DD2949450200F0157A /* Debug */,
+				940373DE2949450200F0157A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		940373ED2949463A00F0157A /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/aws-sdk-ios-spm";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.28.0;
+			};
+		};
+		940373F02949471500F0157A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.33.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		940373F12949471500F0157A /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 940373F02949471500F0157A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		940373F32949471500F0157A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 940373F02949471500F0157A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 940373A92949450100F0157A /* Project object */;
+}
