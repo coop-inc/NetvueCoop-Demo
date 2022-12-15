@@ -32,6 +32,7 @@
 		9403741D2949697100F0157A /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403741C2949697100F0157A /* WebRTC.xcframework */; };
 		9403741E2949697100F0157A /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9403741C2949697100F0157A /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9403742029496C9300F0157A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403741F29496C9300F0157A /* RealmManager.swift */; };
+		945C0564294BD75200377905 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C0563294BD75200377905 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		94037419294968DA00F0157A /* AWSCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AWSCore.xcframework; path = ../../Frameworks/NETVUE_OLD_SDKS/AWSCore.xcframework; sourceTree = "<group>"; };
 		9403741C2949697100F0157A /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = ../../Frameworks/WebRTC.xcframework; sourceTree = "<group>"; };
 		9403741F29496C9300F0157A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		945C0563294BD75200377905 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				940373F5294947C000F0157A /* CameraDevice.swift */,
 				9403740729494D0D00F0157A /* NetvueManager.swift */,
 				9403741F29496C9300F0157A /* RealmManager.swift */,
+				945C0563294BD75200377905 /* Config.swift */,
 			);
 			path = NetvueCoopDemo;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				9403740F294950E600F0157A /* DeviceDetailView.swift in Sources */,
 				9403742029496C9300F0157A /* RealmManager.swift in Sources */,
+				945C0564294BD75200377905 /* Config.swift in Sources */,
 				9403740829494D0D00F0157A /* NetvueManager.swift in Sources */,
 				9403740D2949505000F0157A /* DeviceRowView.swift in Sources */,
 				940373B72949450100F0157A /* ContentView.swift in Sources */,
