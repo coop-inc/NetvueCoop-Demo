@@ -8,20 +8,6 @@
 import Foundation
 import os.log
 import RealmSwift
-
-// There is no arm64 build for simulator. Protect the IDE from exploding by faking
-// `NetvueManager` with a stub class
-#if IOS_SIMULATOR
-class NetvueManager {
-    static let shared = NetvueManager()
-}
-extension NetvueManager {
-    static func start() {}
-    func fetchDevice() {}
-    func fetchDevices() {}
-    func login() {}
-}
-#else
 import NetvueSDK
 
 class NetvueManager: UserManagerNotifications, MediaPlayerDelegate {
@@ -73,10 +59,12 @@ class NetvueManager: UserManagerNotifications, MediaPlayerDelegate {
         NetvueSDK.init().userManager.isLoggedIn()
     }
     
-    func fetchDevice(_ serialNumber: String) {
+    func fetchDevice(_ serialNumber: String, completion: @escaping (DeviceNode?) -> Void)  {
         
-        DeviceManager.init().getDevice(serialNumber: serialNumber, refreshList: false) { deviceNode, error in
-            
+        DeviceManager.init().getDevice(serialNumber: serialNumber, refreshList: false) {  deviceNode, error in
+            DispatchQueue.main.async {
+                completion(deviceNode)
+            }
         }
     }
 
@@ -217,7 +205,7 @@ extension NetvueManager {
     )
 }
 
-#endif
+
 
 
 

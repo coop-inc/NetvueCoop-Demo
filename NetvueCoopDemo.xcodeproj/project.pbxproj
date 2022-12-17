@@ -33,6 +33,8 @@
 		9403741E2949697100F0157A /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9403741C2949697100F0157A /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9403742029496C9300F0157A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403741F29496C9300F0157A /* RealmManager.swift */; };
 		945C0566294BD89400377905 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C0565294BD89400377905 /* Config.swift */; };
+		945C056B294D45DB00377905 /* LivePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C056A294D45DB00377905 /* LivePlayerViewController.swift */; };
+		945C056D294D55BF00377905 /* LivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C056C294D55BF00377905 /* LivePlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		9403741C2949697100F0157A /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = ../../Frameworks/WebRTC.xcframework; sourceTree = "<group>"; };
 		9403741F29496C9300F0157A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		945C0565294BD89400377905 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = ../../Config.swift; sourceTree = "<group>"; };
+		945C056A294D45DB00377905 /* LivePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayerViewController.swift; sourceTree = "<group>"; };
+		945C056C294D55BF00377905 /* LivePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,11 +212,21 @@
 		9403740929494D6E00F0157A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				945C0569294D450D00377905 /* Live */,
 				9403740A29494D7E00F0157A /* DeviceListView.swift */,
 				9403740C2949505000F0157A /* DeviceRowView.swift */,
 				9403740E294950E600F0157A /* DeviceDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		945C0569294D450D00377905 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				945C056A294D45DB00377905 /* LivePlayerViewController.swift */,
+				945C056C294D55BF00377905 /* LivePlayerView.swift */,
+			);
+			path = Live;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,10 +369,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9403740F294950E600F0157A /* DeviceDetailView.swift in Sources */,
+				945C056D294D55BF00377905 /* LivePlayerView.swift in Sources */,
 				9403742029496C9300F0157A /* RealmManager.swift in Sources */,
 				9403740829494D0D00F0157A /* NetvueManager.swift in Sources */,
 				9403740D2949505000F0157A /* DeviceRowView.swift in Sources */,
 				940373B72949450100F0157A /* ContentView.swift in Sources */,
+				945C056B294D45DB00377905 /* LivePlayerViewController.swift in Sources */,
 				9403740B29494D7E00F0157A /* DeviceListView.swift in Sources */,
 				945C0566294BD89400377905 /* Config.swift in Sources */,
 				940373B52949450100F0157A /* NetvueCoopDemoApp.swift in Sources */,
