@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
-
+import SwiftyBeaver
+let log = SwiftyBeaver.self
+let console = ConsoleDestination()
 
 @main
 struct NetvueCoopDemoApp: App {
     
     init() {
+        log.addDestination(console)
         RealmManager.configure()
         NetvueManager.start()
     }

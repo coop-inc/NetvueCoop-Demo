@@ -8,14 +8,15 @@
 import RealmSwift
 
 
-class CameraDevice: Object, Identifiable {
+public class CameraDevice: Object, Identifiable {
     @Persisted(primaryKey: true) public var serialNumber = ""
     @Persisted public var online = false
     @Persisted public var name = "Unkown"
+    @Persisted public var modelName = "Unkown"
     @Persisted public var ipAddress = "Unkown"
     @Persisted public var batteryPercent = 0
     
-    var id: String {
+    public var id: String {
         serialNumber
     }
 }

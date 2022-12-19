@@ -33,8 +33,9 @@
 		9403741E2949697100F0157A /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9403741C2949697100F0157A /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9403742029496C9300F0157A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403741F29496C9300F0157A /* RealmManager.swift */; };
 		945C0566294BD89400377905 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C0565294BD89400377905 /* Config.swift */; };
-		945C056B294D45DB00377905 /* LivePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C056A294D45DB00377905 /* LivePlayerViewController.swift */; };
-		945C056D294D55BF00377905 /* LivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C056C294D55BF00377905 /* LivePlayerView.swift */; };
+		94EDF3BE2950FBBC00C12313 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 94EDF3BD2950FBBC00C12313 /* SwiftyBeaver */; };
+		94EDF3C02950FC7F00C12313 /* Devices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EDF3BF2950FC7F00C12313 /* Devices.storyboard */; };
+		94EDF3C22950FD4E00C12313 /* LiveDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDF3C12950FD4E00C12313 /* LiveDeviceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,8 +98,8 @@
 		9403741C2949697100F0157A /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = ../../Frameworks/WebRTC.xcframework; sourceTree = "<group>"; };
 		9403741F29496C9300F0157A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		945C0565294BD89400377905 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = ../../Config.swift; sourceTree = "<group>"; };
-		945C056A294D45DB00377905 /* LivePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayerViewController.swift; sourceTree = "<group>"; };
-		945C056C294D55BF00377905 /* LivePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePlayerView.swift; sourceTree = "<group>"; };
+		94EDF3BF2950FC7F00C12313 /* Devices.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Devices.storyboard; sourceTree = "<group>"; };
+		94EDF3C12950FD4E00C12313 /* LiveDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDeviceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 				940374172949673800F0157A /* AWSS3.xcframework in Frameworks */,
 				94037411294961F000F0157A /* NetvueSDK.xcframework in Frameworks */,
 				9403741D2949697100F0157A /* WebRTC.xcframework in Frameworks */,
+				94EDF3BE2950FBBC00C12313 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +225,8 @@
 		945C0569294D450D00377905 /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				945C056A294D45DB00377905 /* LivePlayerViewController.swift */,
-				945C056C294D55BF00377905 /* LivePlayerView.swift */,
+				94EDF3BF2950FC7F00C12313 /* Devices.storyboard */,
+				94EDF3C12950FD4E00C12313 /* LiveDeviceViewController.swift */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -249,6 +251,7 @@
 			packageProductDependencies = (
 				940373F12949471500F0157A /* Realm */,
 				940373F32949471500F0157A /* RealmSwift */,
+				94EDF3BD2950FBBC00C12313 /* SwiftyBeaver */,
 			);
 			productName = NetvueCoopDemo;
 			productReference = 940373B12949450100F0157A /* NetvueCoopDemo.app */;
@@ -325,6 +328,7 @@
 			packageReferences = (
 				940373ED2949463A00F0157A /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */,
 				940373F02949471500F0157A /* XCRemoteSwiftPackageReference "realm-swift" */,
+				94EDF3BC2950FBBC00C12313 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = 940373B22949450100F0157A /* Products */;
 			projectDirPath = "";
@@ -344,6 +348,7 @@
 			files = (
 				940373BD2949450200F0157A /* Preview Assets.xcassets in Resources */,
 				940373B92949450200F0157A /* Assets.xcassets in Resources */,
+				94EDF3C02950FC7F00C12313 /* Devices.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,12 +374,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9403740F294950E600F0157A /* DeviceDetailView.swift in Sources */,
-				945C056D294D55BF00377905 /* LivePlayerView.swift in Sources */,
 				9403742029496C9300F0157A /* RealmManager.swift in Sources */,
+				94EDF3C22950FD4E00C12313 /* LiveDeviceViewController.swift in Sources */,
 				9403740829494D0D00F0157A /* NetvueManager.swift in Sources */,
 				9403740D2949505000F0157A /* DeviceRowView.swift in Sources */,
 				940373B72949450100F0157A /* ContentView.swift in Sources */,
-				945C056B294D45DB00377905 /* LivePlayerViewController.swift in Sources */,
 				9403740B29494D7E00F0157A /* DeviceListView.swift in Sources */,
 				945C0566294BD89400377905 /* Config.swift in Sources */,
 				940373B52949450100F0157A /* NetvueCoopDemoApp.swift in Sources */,
@@ -756,6 +760,14 @@
 				minimumVersion = 10.33.0;
 			};
 		};
+		94EDF3BC2950FBBC00C12313 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -768,6 +780,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 940373F02949471500F0157A /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		94EDF3BD2950FBBC00C12313 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94EDF3BC2950FBBC00C12313 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

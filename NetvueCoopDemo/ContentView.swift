@@ -9,15 +9,15 @@ import SwiftUI
 import NetvueSDK
 
 struct ContentView: View {
+    
     enum Path: Hashable {
         case device_list
         case device_details(device: CameraDevice)
-        case live(device: DeviceNode)
     }
     
-    @State private var path: [Path] = []
+    @State private var presentedViews: [Path] = []
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $presentedViews) {
             VStack(spacing: 15) {
                 HStack {
                     Text("NetvueSDK Version")
@@ -60,8 +60,6 @@ struct ContentView: View {
                     DeviceListView()
                 case let .device_details(device):
                     DeviceDetailView(device: device)
-                case let .live(device):
-                    LivePlayerView(device: device)
                 }
             }
             .onAppear {

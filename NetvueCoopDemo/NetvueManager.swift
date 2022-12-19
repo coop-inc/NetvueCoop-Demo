@@ -10,43 +10,13 @@ import os.log
 import RealmSwift
 import NetvueSDK
 
-class NetvueManager: UserManagerNotifications, MediaPlayerDelegate {
-    func onMediaPlayerError(mediaPlayer: MediaPlayer, error: MediaPlayerError) {
-        
-    }
-    
-    func onMediaPlayerReportNetworkSpeed(mediaPlayer: MediaPlayer, byteSizePerSecond: Int64) {
-        
-    }
-    
-    func onMediaPlayerStateChanged(mediaPlayer: MediaPlayer, state: MediaPlayerState) {
-        
-    }
-    
-    func onMediaPlayerVideoRendered(pts: Int64) {
-        
-    }
+class NetvueManager: UserManagerNotifications {
+
     
     static let shared = NetvueManager()
-    private let RealmBackgroundQueue = DispatchQueue(label: "farm.coop.NetvueCoopDemo", qos: .utility, autoreleaseFrequency: .workItem, target: .main)
-    
+    var userInfo: UserInfo?
     private let consoleLogger = ConsoleLogger(enabledPriority: LogLevel.verbose)
-    private init() {
-        NetvueSDK.init().userManager.registerNotifications(delegate: self)
-        SDKLog.init().addLogger(logger: consoleLogger)
-    }
     
-    static func start() {
-        Self.logger.info("NetvueSDK starting....")
-        NetvueSDK.init().configure { conf in
-            Self.logger.info("Configuring....")
-            conf.enableLifeCycleListener = true
-            conf.ucid = "82db69b981"
-            conf.appName = "Coop"
-        }
-    }
-    
-
     lazy var sdkVersion: String = {
         NetvueSDK.init().description()
     }()
@@ -59,60 +29,62 @@ class NetvueManager: UserManagerNotifications, MediaPlayerDelegate {
         NetvueSDK.init().userManager.isLoggedIn()
     }
     
-    func fetchDevice(_ serialNumber: String, completion: @escaping (DeviceNode?) -> Void)  {
+    var username: String? {
+        userInfo?.userName
+    }
+    
+    func setUserInfo() {
+        userInfo = NetvueSDK.init().userManager.userInfoManager.takeUserInfo()
+    }
         
+    private init() {
+        NetvueSDK.init().userManager.registerNotifications(delegate: self)
+        //SDKLog.init().addLogger(logger: consoleLogger)
+    }
+    
+    private static let logger = Logger(
+            subsystem: Bundle.main.bundleIdentifier!,
+            category: String(describing: "NetvueManager")
+    )
+    
+    static func start() {
+        Self.logger.info("NetvueSDK starting....")
+        NetvueSDK.init().configure { conf in
+            Self.logger.info("Configuring....")
+            conf.enableLifeCycleListener = true
+            conf.ucid = "82db69b981"
+            conf.appName = "Coop"
+        }
+        
+    }
+    
+
+    func fetchDevice(_ serialNumber: String, completion: @escaping (DeviceNode?) -> Void)  {
+        Self.logger.info("Fetching device \(serialNumber, privacy: .public)")
         DeviceManager.init().getDevice(serialNumber: serialNumber, refreshList: false) {  deviceNode, error in
+            Self.logger.info("Retruning \(deviceNode, privacy: .public)")
             DispatchQueue.main.async {
                 completion(deviceNode)
             }
         }
     }
-
     
-    /// Fetch devices updating our own friendlier wrapper `CameraDevice`
     func fetchDevices() {
-        
         DeviceManager.init().getDeviceList(forceRefresh: false) { devices, error in
-
             devices?.forEach { deviceNode in
                 Self.logger.info("device: \(deviceNode.serialNumber, privacy: .public)")
                 self.updateDevice(deviceNode)
-  
             }
         }
     }
     
-//    private func updateDevice(_ device: DeviceNode) async {
-//        do {
-//            let online = try await device.online.getValue() as Any
-//            let name = try await device.name.getValue() as Any
-//            let ipAddress = try await device.wifiIp.getValue() as Any
-//            let batteryPercent = try await device.batteryPercent.getValue() as Any
-//            let sn = device.serialNumber
-//
-//
-//            RealmBackgroundQueue.async { [self] in
-//                let realm = try! Realm(configuration: .defaultConfiguration, queue: RealmBackgroundQueue)
-//                realm.beginWrite()
-//                let object = realm.create(CameraDevice.self, value: ["serialNumber": sn, "name": name, "online": online, "ipAddress": ipAddress, "batteryPercent": batteryPercent ] , update: .modified)
-//                try! realm.commitWrite()
-//            }
-//
-//        } catch {
-//            Self.logger.error("updateDevice failed: \(error.localizedDescription, privacy: .public)")
-//        }
-//
-//    }
-    
     private func updateDevice(_ device: DeviceNode) {
-        //DeviceExpressInstruction(instruction: "Test")
-        //NetvueSDK.init().httpAPI.devices.
         device.online.getValue { val, error in
             if let val {
                 Self.logger.debug("deviceNode.online.getValue: \(val.boolValue, privacy: .public)")
                 let realm = try! Realm()
                 try! realm.write {
-                    realm.create(CameraDevice.self, value: ["serialNumber": device.serialNumber, "online": val.boolValue], update: .modified)
+                    realm.create(CameraDevice.self, value: ["serialNumber": device.serialNumber, "online": val.boolValue, "modelName": device.modelName.name], update: .modified)
                 }
             }
             if let error {
@@ -154,11 +126,11 @@ class NetvueManager: UserManagerNotifications, MediaPlayerDelegate {
     func login(username: String, password: String) {
         guard !NetvueSDK.init().userManager.isLoggedIn() else {
             Self.logger.info("User already logged in")
-            //setUserInfo()
+            setUserInfo()
             return
         }
         
-        NetvueSDK.init().userManager.login(username: username, password: password, locale: NSLocale.current.identifier) { retCode, error in
+        NetvueSDK.init().userManager.login(username: "d7b255b59a9d4642", password: "runhir-zetru5-bYnvyt", locale: NSLocale.current.identifier) { retCode, error in
             DispatchQueue.main.async {
                 if let error {
                     Self.logger.error("error: \(error, privacy: .public)")
@@ -179,7 +151,6 @@ class NetvueManager: UserManagerNotifications, MediaPlayerDelegate {
     }
 }
 
-
 // MARK: UserManagerNotifications
 extension NetvueManager {
     func onUserLogin() {
@@ -190,23 +161,9 @@ extension NetvueManager {
     
     func onUserLogout(reason: UserLogoutReason) {
         DispatchQueue.main.async {
-            Self.logger.info("onUserLogout reason: \(reason, privacy: .public)")
+            Self.logger.info("reason: \(reason, privacy: .public)")
         }
     }
 }
-
-
-
-// MARK: Logger
-extension NetvueManager {
-    private static let logger = Logger(
-            subsystem: Bundle.main.bundleIdentifier!,
-            category: String(describing: "NetvueManager")
-    )
-}
-
-
-
-
 
 
